@@ -12,7 +12,8 @@
   "dependencies": {
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
-    "postgres": "^3.4.4"
+    "postgres": "^3.4.4",
+    "prueba": "file:"
   },
   "devDependencies": {
     "nodemon": "^3.1.4"
