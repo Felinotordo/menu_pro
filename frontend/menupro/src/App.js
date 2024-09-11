@@ -13,7 +13,7 @@ function App() {
 
         {/* MenuList */}
         <div className="flex-grow">
-          <MenuList />
+          <MenuList type="category"/>
         </div>
 
         {/* Footer */}
