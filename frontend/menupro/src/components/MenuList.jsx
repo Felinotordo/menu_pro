@@ -2,9 +2,15 @@ import React from "react";
 import CategoryCard from "./CategoryCard";
 import { useFetch } from "../customHooks/useFetch";
 import ItemCard from "./ItemCard";
+import { useParams} from "react-router-dom";
 
 const MenuList = (props) => {
-  const items = useFetch(`${process.env.REACT_APP_URL_BACKEND}/category/`);
+  const { category } = useParams();
+  const categoryValue = category || " "; // Si 'category' es undefined, será " "
+
+  const items = useFetch(
+    `${process.env.REACT_APP_URL_BACKEND}/category/${categoryValue}`
+  );
 
   return (
     <>
