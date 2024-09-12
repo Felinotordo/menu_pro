@@ -4,7 +4,6 @@ import { ItemsContext } from "../context/context";
 const CartItem = () => {
   const { items, deleteItem } = useContext(ItemsContext);
 
-  // Agrupar ítems por nombre y contar cantidades
   const groupedItems = items.reduce((acc, item) => {
     if (acc[item.name]) {
       acc[item.name].cantidad += 1;
@@ -14,7 +13,6 @@ const CartItem = () => {
     return acc;
   }, {});
 
-  // Convertir el objeto agrupado en un array para mapear
   const orderItems = Object.values(groupedItems);
 
   const deleteButton = (item) => {
